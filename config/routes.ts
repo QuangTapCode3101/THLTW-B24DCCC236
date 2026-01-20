@@ -16,7 +16,6 @@
 		],
 	},
 
-	///////////////////////////////////
 	// DEFAULT MENU
 	{
 		path: '/dashboard',
@@ -43,19 +42,13 @@
 		component: './TodoList',
 	},
 
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+	// ✅ ROUTE PRODUCTS (BẠN ĐANG CẦN)
+	{
+		path: '/products',
+		name: 'Quản lý sản phẩm',
+		component: './Products',
+		icon: 'AppstoreOutlined',
+	},
 
 	{
 		path: '/notification',
@@ -78,9 +71,6 @@
 		],
 		layout: false,
 		hideInMenu: true,
-	},
-	{
-		path: '/',
 	},
 	{
 		path: '/403',
