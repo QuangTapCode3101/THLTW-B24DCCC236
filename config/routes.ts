@@ -15,9 +15,6 @@
 			},
 		],
 	},
-
-	///////////////////////////////////
-	// DEFAULT MENU
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
@@ -43,19 +40,25 @@
 		component: './TodoList',
 	},
 
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+	// --- NHÓM BÀI TẬP THỰC HÀNH TH01 ---
+	{
+		name: 'Thực hành TH01',
+		path: '/th-01',
+		icon: 'ExperimentOutlined',
+		routes: [
+			{
+				name: 'Bài 1: Đoán số',
+				path: '/th-01/guess-number',
+				component: './GuessNumber',
+			},
+			{
+				name: 'Bài 2: Quản lý học tập',
+				path: '/th-01/study-manager',
+				component: './StudyManager',
+			},
+		],
+	},
+	// ----------------------------------
 
 	{
 		path: '/notification',
@@ -81,6 +84,7 @@
 	},
 	{
 		path: '/',
+		redirect: '/dashboard', // Thêm redirect để tránh trang trắng khi vào root
 	},
 	{
 		path: '/403',
@@ -93,6 +97,7 @@
 		layout: false,
 	},
 	{
+		path: '/*',
 		component: './exception/404',
 	},
 ];
