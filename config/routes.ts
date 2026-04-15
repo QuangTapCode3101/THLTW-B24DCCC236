@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+  path: '/orders',
+  name: 'Quản lý đơn hàng',
+  icon: 'shop',
+  component: './KTGK',
+},
 
 	// DANH MUC HE THONG
 	// {
