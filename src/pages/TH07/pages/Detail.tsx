@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom'; // 1. Đổi useNavigate thành useHistory
+import { useParams, useHistory } from 'react-router-dom'; 
 import { Button, Tag, Divider, Typography } from 'antd';
 import ReactMarkdown from 'react-markdown';
 import { Post } from '../interfaces/Post';
-import { initialPosts } from '../data/mockData'; // Để tránh lỗi undefined posts
+import { initialPosts } from '../data/mockData'; 
 
 const Detail: React.FC<{ posts?: Post[]; onView?: (id: string) => void }> = ({ posts, onView }) => {
   const { id } = useParams<{ id: string }>();
-  const history = useHistory(); // 2. Khai báo history thay cho navigate
+  const history = useHistory(); 
   
   // 3. Lấy dữ liệu an toàn
   const data = posts || initialPosts;
@@ -23,7 +23,7 @@ const Detail: React.FC<{ posts?: Post[]; onView?: (id: string) => void }> = ({ p
 
   return (
     <div style={{ padding: '24px', maxWidth: 800, margin: '0 auto' }}>
-      {/* 4. Dùng history.goBack() để quay lại */}
+
       <Button onClick={() => history.goBack()} style={{ marginBottom: 20 }}>
         Quay lại
       </Button>
