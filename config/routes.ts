@@ -43,12 +43,31 @@
 		component: './TodoList',
 	},
 	{
-  path: '/orders',
-  name: 'Quản lý đơn hàng',
-  icon: 'shop',
-  component: './KTGK',
-},
-
+        path: '/th07',
+        name: 'Thực hành 07',
+        icon: 'BookOutlined', 
+        routes: [
+            {
+                path: '/th07',
+                exact: true, // Quan trọng: Để không nhận nhầm các path con
+                name: 'Danh sách bài viết',
+                component: './TH07/pages/Home',
+            },
+            {
+                path: '/th07/post/:id', // Đường dẫn chi tiết
+                exact: true,
+                name: 'Chi tiết bài viết',
+                component: './TH07/pages/Detail',
+                hideInMenu: true,
+            },
+            {
+                path: '/th07/admin',
+                exact: true,
+                name: 'Quản trị Blog',
+                component: './TH07/pages/Admin',
+            },
+        ],
+    },
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
