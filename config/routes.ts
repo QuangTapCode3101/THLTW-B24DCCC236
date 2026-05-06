@@ -24,18 +24,21 @@
 		component: './TrangChu',
 		icon: 'HomeOutlined',
 	},
+
 	{
 		path: '/gioi-thieu',
 		name: 'About',
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
+
 	{
 		path: '/random-user',
 		name: 'RandomUser',
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+
 	{
 		path: '/todo-list',
 		name: 'TodoList',
@@ -43,45 +46,61 @@
 		component: './TodoList',
 	},
 
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
-
+	///////////////////////////////////
 	{
-		path: '/notification',
+		path: '/th09',
+		name: 'TH09',
+		icon: 'ProjectOutlined',
 		routes: [
 			{
-				path: './subscribe',
-				exact: true,
+				path: '/th09',
+				redirect: '/th09/dashboard',
+			},
+			{
+				path: '/th09/dashboard',
+				name: 'Dashboard',
+				icon: 'DashboardOutlined',
+				component: './TH09/Dashboard',
+			},
+			{
+				path: '/th09/kanban',
+				name: 'Kanban Board',
+				icon: 'ProfileOutlined',
+				component: './TH09/Kanban',
+			},
+			{
+				path: '/th09/tasks',
+				name: 'Danh sách Task',
+				icon: 'TableOutlined',
+				component: './TH09/TaskList',
+			},
+		],
+	},
+
+	///////////////////////////////////
+	// NOTIFICATION
+	{
+		path: '/notification',
+		layout: false,
+		hideInMenu: true,
+		routes: [
+			{
+				path: '/notification/subscribe',
 				component: './ThongBao/Subscribe',
 			},
 			{
-				path: './check',
-				exact: true,
+				path: '/notification/check',
 				component: './ThongBao/Check',
 			},
 			{
-				path: './',
-				exact: true,
+				path: '/notification',
 				component: './ThongBao/NotifOneSignal',
 			},
 		],
-		layout: false,
-		hideInMenu: true,
 	},
-	{
-		path: '/',
-	},
+
+	///////////////////////////////////
+	// EXCEPTION
 	{
 		path: '/403',
 		component: './exception/403/403Page',
